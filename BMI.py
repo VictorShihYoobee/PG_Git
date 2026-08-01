@@ -5,7 +5,14 @@
 #function to input height and weight
 def input_index():   
     height = input("Enter your height(CM): ")
+    while not height.isnumeric():
+        print("Please input a number")
+        height = input("Enter your height(CM): ")
+
     weight = input("Enter your weight(KG): ")
+    while not weight.isnumeric():
+        print("Please input a number")
+        weight = input("Enter your weight(KG): ")
 
     return height, weight
 
