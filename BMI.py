@@ -1,14 +1,20 @@
 
+#BMI Calculator
+#Written by Victor Shih
+
+#function to input height and weight
 def input_index():   
     height = input("Enter your height(CM): ")
     weight = input("Enter your weight(KG): ")
 
     return height, weight
 
+#calulate BMI
 def BMI(height, weight):
     bmi = int(weight) / ((int(height) / 100) ** 2)
     return bmi
 
+# main function
 if __name__ == "__main__":
     h, w =input_index()
     bmi = BMI(h, w)
