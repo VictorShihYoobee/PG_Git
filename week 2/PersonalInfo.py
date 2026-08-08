@@ -77,7 +77,6 @@ if __name__ == "__main__":
             person = random_info()
             people.append(person)
             person.print_info()
-        print()
 
     cont = input("Add new person information ( Y/N )... ")
 
@@ -93,8 +92,7 @@ if __name__ == "__main__":
         person = Person(full_name, age, address, student_id)
         people.append(person)
         person.print_info()
-        print()
-
+        
         cont = input("Add new person information ( Y/N )... ")
     persons_sorted = bubble_sort_people(people)
 
