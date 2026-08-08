@@ -33,7 +33,7 @@ class Person:
 
 def sort_people(people_list):
     """
-    Bubble sorts a list of Person objects by their full name.
+    Sorts a list of Person objects by their full name.
     """
     return sorted(people_list, key=lambda person: person.age)
 
@@ -64,10 +64,11 @@ def random_info():
     return Person(full_name, age, address, student_id)  
         
 if __name__ == "__main__":
+    #people list to store Person objects
     people = []
 
-    num = input("Create 70 students or an unknown number of students? ( Y / N )... "
-    "\n if you choose 70, the program will generate 70 random students. If you choose U, you can enter an unknown number of students manually.")
+    num = input("Create 70 random students or an unknown number of students? ( Y / N )... "
+    "\n if you choose Y, the program will generate 70 random students. :")
 
     if num == "Y":
         for i in range(70):
@@ -97,7 +98,8 @@ if __name__ == "__main__":
     persons_sorted = bubble_sort_people(people)
 
     """
-    Sorts the list of Person objects by age and prints the sorted information."""
+    Sorts the list of Person objects by age and prints the sorted information.
+    """
     print("\nSorted Person Information:")
     for person in persons_sorted:
         person.print_info()
