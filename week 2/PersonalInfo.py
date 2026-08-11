@@ -30,38 +30,47 @@ class Person:
         print(f"Address: {self.address}")
         print(f"Student ID: {self.student_id}")
 
+    def random_info(self):
+        """
+        Generates random personal information for a person.
+        """
+        first_names = ["John", "Jane", "Alice", "Bob", "Charlie"]
+        last_names = ["Smith", "Doe", "Johnson", "Brown", "Davis"]
+        addresses = ["123 Main St", "456 Elm St", "789 Oak St", "101 Maple Ave", "202 Pine Rd"]
+            
+        full_name = f"{random.choice(first_names)} {random.choice(last_names)}"
+        age = random.randint(18, 40)
+        address = random.choice(addresses)
+        student_id = f"S{random.randint(1000, 9999)}"
+            
+        return Person(full_name, age, address, student_id)  
 
-def sort_people(people_list):
-    """
-    Sorts a list of Person objects by their full name.
-    """
-    return sorted(people_list, key=lambda person: person.age)
 
-def bubble_sort_people(people_list):
+class Sorted_persons:
     """
-    Bubble sorts a list of Person objects by their age.
+    A class to represent a sorted list of Person objects.
     """
-    n = len(people_list)
-    for i in range(n):
-        for j in range(0, n-i-1):
-            if people_list[j].age > people_list[j+1].age:
-                people_list[j], people_list[j+1] = people_list[j+1], people_list[j]
-    return people_list
+    def __init__(self, persons):
+        self.persons = persons
 
-def random_info():
-    """
-    Generates random personal information for a person.
-    """
-    first_names = ["John", "Jane", "Alice", "Bob", "Charlie"]
-    last_names = ["Smith", "Doe", "Johnson", "Brown", "Davis"]
-    addresses = ["123 Main St", "456 Elm St", "789 Oak St", "101 Maple Ave", "202 Pine Rd"]
-        
-    full_name = f"{random.choice(first_names)} {random.choice(last_names)}"
-    age = random.randint(18, 40)
-    address = random.choice(addresses)
-    student_id = f"S{random.randint(1000, 9999)}"
-        
-    return Person(full_name, age, address, student_id)  
+    def sort_by_age(self):
+        """
+        Sorts the list of Person objects by age.
+        """
+        self.persons.sort(key=lambda person: person.age)
+
+    
+    def bubble_sort_people(persons):
+        """
+        Bubble sorts a list of Person objects by their age.
+        """
+        n = len(persons)
+        for i in range(n):
+            for j in range(0, n-i-1):
+                if persons[j].age > persons[j+1].age:
+                    persons[j], persons[j+1] = persons[j+1], persons[j]
+        return persons
+
         
 if __name__ == "__main__":
     #people list to store Person objects
@@ -75,7 +84,7 @@ if __name__ == "__main__":
             """
             Generates random personal information for a person and adds it to the list.
             """
-            person = random_info()
+            person = Person.random_info(self=Person)
             people.append(person)
             person.print_info()
 
@@ -95,7 +104,7 @@ if __name__ == "__main__":
         person.print_info()
         
         cont = input("Add new person information ( Y/N )... ")
-    persons_sorted = bubble_sort_people(people)
+    persons_sorted = Sorted_persons.bubble_sort_people(people)
 
     """
     Sorts the list of Person objects by age and prints the sorted information.
