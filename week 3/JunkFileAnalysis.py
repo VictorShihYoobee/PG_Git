@@ -10,4 +10,7 @@ new_context += "text file nanalyssis"
 
 print("Total number of lines: ", lines_count)
 print("New context: ", new_context)
+outfile = open("junk.txt", "w")
+outfile.write(new_context)
+outfile.close()
 infile.close()
