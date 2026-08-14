@@ -84,7 +84,7 @@ if __name__ == "__main__":
             """
             Generates random personal information for a person and adds it to the list.
             """
-            person = Person.random_info(self=Person)
+            person = Person.random_info(self)
             people.append(person)
             person.print_info()
 
