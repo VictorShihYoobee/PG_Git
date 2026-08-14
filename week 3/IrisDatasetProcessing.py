@@ -7,11 +7,13 @@ iris = fetch_ucirepo(id=53)
 features = iris.data.features 
 targets = iris.data.targets 
   
-# metadata 
+""" 
+summary of the dataset
+"""
 print("Total number of record: ",len(features)) 
-unique_names = targets.iloc[:, 0].nunique()
-print("Number of unique flower types: ",unique_names)
-for name in targets.iloc[:, 0].unique():
+unique_names = set(targets.iloc[:, 0])
+print("Number of unique flower types: ",len(unique_names) )
+for name in unique_names:
     print(name)
 
 
