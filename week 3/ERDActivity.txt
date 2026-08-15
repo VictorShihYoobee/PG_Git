@@ -1,0 +1,7 @@
+add more one/ two attributes for any of the entities?
+Student:
+Email (stores the student's institutional email address)
+
+Write the type of relationship between the entities and describe it.
+Student – Enrolls – EnrollmentType: 
+One-to-Many (one student can create many courses enrollment. Each enrollment entry belong to one student.)
