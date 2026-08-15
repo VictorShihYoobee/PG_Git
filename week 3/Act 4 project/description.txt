@@ -1,0 +1,10 @@
+Develop a database project based on the ER diagram created in W3-A3. Review and update the ER diagram if necessary before implementing the database and you can use the sample code in your Blackboard.
+Populate the database with the following sample data:
+3 courses
+2 lecturers
+5 students
+Appropriate enrolment records for the students
+Any additional records required for the other entities/tables in your ER diagram
+Once the database has been developed and populated, use SQL queries to answer the following questions:
+How many students are registered in each course?
+List the names and student IDs of students who have enrolled in more than one course.
