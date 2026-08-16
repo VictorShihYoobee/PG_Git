@@ -1,11 +1,12 @@
+# week 3/Act 4 project/database.py
 import sqlite3
 
-
+# Function to create a database connection
 def create_connection():
     conn = sqlite3.connect("users.db")
     return conn
 
-
+# Function to create tables in the database
 def create_table():
     conn = create_connection()
     cursor = conn.cursor()
@@ -96,8 +97,7 @@ def create_table():
     conn.close()
     print("Database schema created successfully.")
 
-
-
+# Function to populate the database with sample data
 def populate_database():
     conn = sqlite3.connect("users.db")
     cursor = conn.cursor()
@@ -312,7 +312,6 @@ def populate_database():
     conn.commit()
     conn.close()
     print("Sample data populated successfully.")
-
 
 if __name__ == "__main__":
     create_table()

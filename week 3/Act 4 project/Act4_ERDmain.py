@@ -1,6 +1,8 @@
+# week 3/Act 4 project/Act4_ERDmain.py
 from database import create_table
 from user_manager import *
 
+# Function to display the menu
 def menu():
     print("\n==== Student Manager ====")
     print("1. Add Student")
@@ -11,6 +13,7 @@ def menu():
     print("6. Show Students with Multiple Courses")
     print("0. Exit")
 
+# Main function to run the application
 def main():
     create_table()
     populate_database()  # Ensure the database is populated with sample data

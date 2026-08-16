@@ -1,7 +1,8 @@
+# week 3/Act 4 project/user_manager.py
 from database import *
 import sqlite3
 
-
+# Function to add a new student to the database
 def add_user(nid, name, email, B_date, Phone_number):
     conn = create_connection()
     cursor = conn.cursor()
@@ -14,7 +15,7 @@ def add_user(nid, name, email, B_date, Phone_number):
         print(" Email must be unique.")
     conn.close()
 
-
+# Function to view all students in the database
 def view_students():
     conn = create_connection()
     cursor = conn.cursor()
@@ -23,7 +24,7 @@ def view_students():
     conn.close()
     return rows
 
-
+# Function to search for students by name
 def search_student(name):
     conn = create_connection()
     cursor = conn.cursor()
@@ -33,7 +34,7 @@ def search_student(name):
     conn.close()
     return rows
 
-
+# Function to delete a student by NID
 def delete_student(user_id):
     conn = create_connection()
     cursor = conn.cursor()
@@ -42,7 +43,7 @@ def delete_student(user_id):
     conn.close()
     print("🗑️ Student deleted.")
 
-
+# Function to show the contents of any table
 def show_table_contents(table_name):
     conn = create_connection()
     cursor = conn.cursor()
@@ -51,7 +52,7 @@ def show_table_contents(table_name):
     conn.close()
     return rows
 
-
+# Function to show the count of students per course
 def show_student_count_per_course():
     conn = create_connection()
     cursor = conn.cursor()
@@ -66,6 +67,7 @@ def show_student_count_per_course():
     conn.close()
     return rows
 
+# Function to show students with multiple courses
 def show_students_with_multiple_courses():
     conn = create_connection()
     cursor = conn.cursor()
