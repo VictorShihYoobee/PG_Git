@@ -1,0 +1,41 @@
+# Money Exchange System
+
+An Object-Oriented Python application integrated with SQLite designed to manage a currency exchange business.
+
+## Project Scope
+This system enables exchange businesses to:
+* Manage customer profiles and compliance details.
+* Maintain a catalog of global currencies.
+* Update and track changing exchange rates.
+* Process and record secure currency exchange transactions.
+
+---
+
+## Database Architecture & Table Justification
+
+The database consists of **4 core tables** structured to maintain data integrity, reduce redundancy, and ensure compliance.
+
+| Table Name | Description | Justification |
+| :--- | :--- | :--- |
+| **`customers`** | Stores client information (Name, Email, Phone, Legal ID). | **Compliance & Tracking:** Money exchange businesses are legally required to track who is buying/selling currency for auditing and anti-money laundering (AML) purposes. |
+| **`currencies`** | Stores supported currency codes, names, and symbols (e.g., USD, EUR). | **Master Data Management:** Ensures consistency across transactions and rates so users cannot input arbitrary or misspelled currency strings. |
+| **`exchange_rates`** | Tracks historical and current conversion rates between currency pairs. | **Fluctuation Control:** Exchange rates change constantly. This table acts as a log/registry so transactions can accurately reference the exact rate active at the exact time of trade. |
+| **`transactions`** | Records every exchange event (Customer, Source, Target, Amounts, Rate). | **Business Ledger:** Serves as the immutable operational log of the business for accounting, receipts, and reporting. |
+
+---
+
+## How to Run the Project
+
+1. Ensure you have **Python 3.x** installed.
+2. Clone the repository and navigate to the project directory.
+3. Run the application:
+   ```bash
+   python main.py
+
+ ER Diagram Design & Database SchemaThe system is designed around four core entities to handle the full scope of a money exchange business:Customer: Stores details about the individuals performing exchanges.Currency: Stores available currencies (e.g., USD, EUR, JPY) and their base units.ExchangeRate: Stores conversion rates relative to a base currency.Transaction: Records the exchange operations, linking customers, source currencies, target currencies, amounts, and rates.Entity-Relationship Structure (Textual ERD)Customer (1) $\leftrightarrow$ ($\infty$) Transaction (A customer can make many transactions)Currency (1) $\leftrightarrow$ ($\infty$) Transaction (As source currency or target currency)Currency (1) $\leftrightarrow$ ($\infty$) ExchangeRate (A currency can have historical/current rates)2. Project File StructurePlaintextmoney_exchange_project/
+│
+├── database.py       # OOP Database Manager (SQLite)
+├── models.py         # OOP Domain Models (Customer, Currency, ExchangeRate, Transaction)
+├── main.py           # Application entry point / Demo script
+├── requirements.txt  # Project dependencies (optional/standard library)
+└── README.md         # Documentation with table justification
