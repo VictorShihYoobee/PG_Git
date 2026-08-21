@@ -1,1 +1,15 @@
-Use Case DescriptionsUse CaseActorsDescriptionRegister ProfileCustomer, StaffRegisters client identity details (Name, Legal ID, Contact info) into the system for compliance and auditing.Manage CustomerStaffAllows staff members to search, update, or manage customer profile information.View Exchange RatesCustomer, StaffViews the latest active conversion rates for various currency pairs.Update RatesStaffInputs or updates market conversion rates into the exchange_rates database table.Manage CurrencyStaffAdds or maintains the master catalog of supported global currencies (e.g., USD, EUR, JPY).Execute TransactionCustomer, StaffProcesses the currency conversion, computes the target amount based on the active rate, and logs the trade into the transactions table.
+use case
+
+Actor-Customer
+1. Register Profile
+    Registers client identity details (Name, Legal ID, Contact info)
+
+2. View Exchange Rates
+    Views the latest conversion rates for various currency pairs.
+
+Actor-Staff
+1. Update Rates
+    Inputs or updates conversion rates into the database.
+2. Manage Currency
+    Support global currencies (e.g., USD, EUR, JPY).
+
