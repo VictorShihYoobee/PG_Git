@@ -6,10 +6,14 @@ Actor-Customer
 
 2. View Exchange Rates
     Views the latest conversion rates for various currency pairs.
-
+3. View Exchange Rates
+    Views the latest active conversion rates for various currency pairs.
+    
 Actor-Staff
 1. Update Rates
     Inputs or updates conversion rates into the database.
 2. Manage Currency
     Support global currencies (e.g., USD, EUR, JPY).
+3. View Exchange Rates
+    Views the latest active conversion rates for various currency pairs.
 
