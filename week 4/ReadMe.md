@@ -16,5 +16,7 @@ Actor-Staff
     Support global currencies (e.g., USD, EUR, JPY).
 3. View Exchange Rates
     Views the latest active conversion rates for various currency pairs.
-<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/dae898a3-9bb0-4f6c-9641-bc283bbdf22e" />
+
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/2e6cc5bd-0b2c-48b2-bf4d-1a5846efd4ca" />
+
 
