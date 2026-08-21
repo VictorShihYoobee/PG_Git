@@ -6,7 +6,7 @@ Actor-Customer
 2. View Exchange Rates
     Views the latest active conversion rates for various currency pairs.
 3. Modify Profile --extend->  Register Profile
-    Customers modify their identity details.
+    Customers modify their identity details(Name, Contact info).
 
 
 Actor-Staff
