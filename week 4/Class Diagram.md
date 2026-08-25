@@ -4,18 +4,19 @@ I design 1 class diagram, and 5 main classes:
 
 # Relationships
 
-• Customer 1 ─── n Transaction (Association): A customer can make multiple transactions.
+• Customer 1 ─ * Transaction (Association): A customer can make multiple transactions.
 
-• Currency 1 ─── n ExchangeRate (Aggregation): A currency's Exchange rates vary over time.
+• Currency 1 ─ * ExchangeRate (Aggregation): A currency's Exchange rates vary over time.
 
-• Currency 1 ─── n Transaction (Aggregation): Each transaction references a currency. A currency can included in different tranctions.
+• Currency 1 ─ * Transaction (Aggregation): Each transaction references a currency. A currency can included in different tranctions.
 
-• ExchangeService ..> Transaction & ExchangeRate (Dependency): calculations and rate updates.
+• ExchangeService ..> Transaction & ExchangeRate: Create transaction and rate updates.
 
 # Represented Functionality
 
 Calculates converted values using $\text{convertedAmount} = \text{sourceAmount} \times \text{appliedRate}$, 
-processes transactions, updates exchange rates, and manages currencies. 
+
+process transactions, updates exchange rates, and manages currencies. 
 
 # UML diagram shows below:
 
