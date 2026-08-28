@@ -2,23 +2,35 @@
 #Use Case Diagram
 Student: enroll_course, submit_assignment, view_grades, view_course_info
 Lecturer:  view_students, give_grades, view_course_info
+
 ![alt text](image.png)
 
 #Activities Diagram
-student can 
+Student can view the courses information and enroll the course they want. After enroll a course, they can submit their assignments.
+Lecturer can view all students and give grades for every assignments. 
+The Student can view their grade.
+
+學生先查看課程資訊並選擇是否註冊課程。完成註冊後，學生提交作業，系統儲存提交內容並通知 Lecturer。Lecturer 查看學生與作業後給予成績，系統再儲存成績，最後 Student 可以查看自己的 Grade。
+
 ![alt text](image-2.png)
 
 #Class Diagram
 Student: student_id, name
+
     + submit_assignment
+
     + enroll_course
+    
     + view_grade
 
 Lecturer: lecturer_id, name
+    
     + give_grade
+    
     + view_course_info
 
 Course: course_id, course_title
+    
     + get_course_info
 
 grades: grade_id, course_id, student_id, grade
