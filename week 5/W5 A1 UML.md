@@ -10,8 +10,6 @@ Student can view the courses information and enroll the course they want. After 
 Lecturer can view all students and give grades for every assignments. 
 The Student can view their grade.
 
-學生先查看課程資訊並選擇是否註冊課程。完成註冊後，學生提交作業，系統儲存提交內容並通知 Lecturer。Lecturer 查看學生與作業後給予成績，系統再儲存成績，最後 Student 可以查看自己的 Grade。
-
 ![alt text](image-2.png)
 
 #Class Diagram
